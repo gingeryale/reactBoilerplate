@@ -6,7 +6,8 @@ module.exports = {
     },
     resolve: {
         root:__dirname,
-        alias: {},
+        alias: {
+        },
         extensions: ['', '.js', '.jsx']
     },
     module: {
@@ -17,7 +18,7 @@ module.exports = {
                     presets: ['react', 'es2015', 'stage-0']
                 },
                 test: /\.jsx?$/,
-                exclude:/(node_modues|bower_components)/
+                exclude:/(node_modules|bower_components)/
             }
         ]
     }
