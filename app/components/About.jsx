@@ -3,7 +3,14 @@ var React = require('react');
 
 var About = (props) => {
 	return (
-			<h3>About Page Component</h3>
+		<div>
+			<h3 className="text-center">About this app</h3>
+			<ul>
+			<li>open weather map api tool</li>
+			<li>link to github repo + heroku app</li>
+			<li>react app tool</li>
+			</ul>
+		</div>
 		)
 
 }
