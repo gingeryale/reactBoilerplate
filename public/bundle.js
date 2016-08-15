@@ -26428,7 +26428,7 @@
 		return React.createElement(
 			'h3',
 			null,
-			' Examples Page Component'
+			' Examples'
 		);
 	};
 
