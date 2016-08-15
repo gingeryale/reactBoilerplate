@@ -1,0 +1,13 @@
+$margin-large: 2.5rem;
+$title-color: #3e4441;
+
+.page-title {
+	margin-top:$margin-large;
+	margin-bottom:$margin-large;
+	color: $title-color;
+}
+
+input[type=search]{
+	box-shadow: none;
+	border:1px solid blue;
+}

@@ -113,6 +113,9 @@
 	__webpack_require__(254);
 	$(document).foundation();
 
+	// app.css
+	__webpack_require__(258);
+
 	ReactDOM.render(React.createElement(
 	  Router,
 	  { history: hashHistory },
@@ -24993,7 +24996,7 @@
 							React.createElement(
 								'li',
 								null,
-								React.createElement('input', { type: 'search', placeholder: 'search weather' })
+								React.createElement('input', { type: 'search', placeholder: 'Search weather by city' })
 							),
 							React.createElement(
 								'li',
@@ -25081,7 +25084,7 @@
 				null,
 				React.createElement(
 					'h3',
-					{ className: 'text-center' },
+					{ className: 'text-center page-title' },
 					'Get Weather'
 				),
 				React.createElement(WeatherForm, { onSearch: this.handleSearch }),
@@ -25121,7 +25124,7 @@
 				React.createElement(
 					'form',
 					{ onSubmit: this.onFormSubmit },
-					React.createElement('input', { type: 'text', ref: 'location' }),
+					React.createElement('input', { type: 'search', ref: 'location', placeholder: 'Search weather by city' }),
 					React.createElement(
 						'button',
 						{ className: 'button expanded hollow' },
@@ -26596,7 +26599,7 @@
 			null,
 			React.createElement(
 				"h3",
-				{ className: "text-center" },
+				{ className: "text-center page-title" },
 				"About this app"
 			),
 			React.createElement(
@@ -26641,7 +26644,7 @@
 			null,
 			React.createElement(
 				'h3',
-				{ className: 'text-center' },
+				{ className: 'text-center page-title' },
 				'Examples of searches'
 			),
 			React.createElement(
@@ -27033,6 +27036,46 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
+
+
+/***/ },
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(259);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(257)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./app.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./app.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(256)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem;\n  color: #3e4441; }\n\ninput[type=search] {\n  box-shadow: none;\n  border: 1px solid blue; }\n", ""]);
+
+	// exports
 
 
 /***/ }
