@@ -12,6 +12,6 @@ var About = (props) => {
 			</ul>
 		</div>
 		)
-
 }
+
 module.exports = About;
